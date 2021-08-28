@@ -10,10 +10,17 @@ $(document).ready(function () {
     });
 });
 
-const phone = document.querySelector('#phone');
+const phone = document.querySelector('#phone'),
+      buttons = document.querySelectorAll('button');
 
 phone.addEventListener('input', (e) => {
     phone.value = phone.value.replace(/\D/, '');
+});
+
+buttons.forEach(button => {
+    button.addEventListener('click', event => {
+        event.preventDefault();
+    });
 });
 
 timer(1800);
