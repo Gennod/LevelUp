@@ -1,0 +1,62 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    font-size: 64px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    color: #d1a400;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 0 10px;
+}
+
+.button {
+    background: #d1a400;
+    width: 150px;
+    padding: 15px 0;
+    display: block;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid #000;
+    color: #000;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 64px;
+}
+
+@import "blocks/promo";
+@import "blocks/structure";
+@import "blocks/reviews";
+@import "blocks/doctor";
+@import "blocks/order";

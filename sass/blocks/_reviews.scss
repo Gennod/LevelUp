@@ -1,0 +1,65 @@
+.reviews {
+    background: rgb(0, 10, 41);
+    background: linear-gradient(90deg, rgba(0, 10, 41, 1) 0%, rgba(0, 19, 77, 1) 52%, rgba(0, 10, 41, 1) 100%);
+    padding: 50px 0 50px 0;
+    &__carousel {
+        padding: 50px 15px;
+        position: relative;
+        .slick-prev {
+            background: none;
+            border: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            cursor: pointer;
+        }
+        .slick-next {
+            background: none;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+    &__item {
+        text-align: center;
+    }
+    &__name {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    &__img-wrapper {
+        margin-bottom: 15px;
+    }
+    &__img {
+        img {
+            margin: 0 auto;
+            height: 250px;
+            width: auto;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media (max-width: 666px) {
+    .reviews {
+        &__carousel {
+            .slick-prev {
+                display: none !important;
+            }
+            .slick-next {
+                display: none !important;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .reviews {
+        padding: 20px 0 20px 0;
+    }
+}
