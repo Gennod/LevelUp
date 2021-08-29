@@ -8,7 +8,9 @@ function getZero(num) {
 
 function timer(time) {
     // timer
-    const deadline = Date.parse(new Date()) + (time * 1000);
+    const deadline = Date.parse(new Date()) + (time * 1000),
+        timer = setInterval(setClock, 1000);
+
     function calcTimeRemaining(deadline) {
         let timeRemaining = (deadline - (Date.parse(new Date()))) / 1000,
             minutesRemaining = Math.floor(timeRemaining / 60),
@@ -22,8 +24,7 @@ function timer(time) {
     setClock();
     function setClock() {
         const minutesRemaining = document.querySelector('#minutes'),
-            secondsRemaining = document.querySelector('#seconds'),
-            timer = setInterval(setClock, 1000);
+            secondsRemaining = document.querySelector('#seconds');
 
         minutesRemaining.innerHTML = getZero(calcTimeRemaining(deadline).minutesRemaining);
         secondsRemaining.innerHTML = getZero(calcTimeRemaining(deadline).secondsRemaining);
@@ -34,6 +35,7 @@ function timer(time) {
         }
 
     }
+
 }
 
 export default timer;
