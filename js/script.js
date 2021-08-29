@@ -2,6 +2,7 @@ import timer, { getZero } from "./timer.js";
 
 $(document).ready(function () {
     $('.reviews__carousel').slick({
+        infinite: true,
         autoplay: true,
         slidesToShow: 1,
         speed: 1200,
