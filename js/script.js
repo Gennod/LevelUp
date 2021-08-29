@@ -1,4 +1,4 @@
-import timer, {getZero} from "./timer.js";
+import timer, { getZero } from "./timer.js";
 
 $(document).ready(function () {
     $('.reviews__carousel').slick({
@@ -11,16 +11,25 @@ $(document).ready(function () {
 });
 
 const phone = document.querySelector('#phone'),
-      buttons = document.querySelectorAll('button');
+    form = document.querySelector('form');
 
 phone.addEventListener('input', (e) => {
     phone.value = phone.value.replace(/\D/, '');
 });
 
-buttons.forEach(button => {
-    button.addEventListener('click', event => {
-        event.preventDefault();
+
+$(function () {
+    $("a[href^='#']").click(function () {
+        var _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
     });
+});
+
+form.addEventListener('submit', event => {
+    event.preventDefault();
+
+    form.reset();
 });
 
 timer(1800);
